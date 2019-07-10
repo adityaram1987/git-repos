@@ -1,0 +1,48 @@
+package com;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+public class WelcomeServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    
+    public WelcomeServlet() {
+        super();
+        
+    }
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		/*PrintWriter out= response.getWriter();
+		out.println("<h1>Unauthorised access to this page </h1>");
+		out.println("<h3>Try<a href='login.html'>Login</a></h3>");*/
+		doPost(request,response);
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String name= request.getParameter("t1");
+		String pwd= request.getParameter("t2");
+		
+		PrintWriter out= response.getWriter();
+		
+		if(name.equals(pwd)){
+			out.println("<h1>");
+			out.println("Welcome! "+name);
+			out.println("</h1>");
+		}
+		else {
+			out.println("<h1>Sorry Invalid credentials....</h1>");
+			out.println("<h3>To try again <a href='login.html'>Click Here</a></h3>");
+		}
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.pack.lombokdemo;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        Emp e1 = new Emp();
+        e1.setAge(20);
+        e1.setDesignation("Tester");
+        e1.setName("Aditya");
+        e1.setSalary(45000);
+        
+        System.out.println(e1);
+    }
+}

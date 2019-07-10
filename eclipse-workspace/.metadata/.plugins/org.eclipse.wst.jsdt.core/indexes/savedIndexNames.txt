@@ -1,0 +1,5 @@
+INDEX VERSION 1.4+C:\Users\rayadity\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3886102506.index
+1946731041.index
+2621172327.index
+2420718837.index

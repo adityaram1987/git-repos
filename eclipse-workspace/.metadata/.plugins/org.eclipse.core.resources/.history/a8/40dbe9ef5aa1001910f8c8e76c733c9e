@@ -1,0 +1,24 @@
+package com.pack.lombokdemo;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        Emp e1 = new Emp("Aditya",21,50000,"Tester");
+        //Emp e2 = new Emp("Aditya",21,50000,"Tester");
+        App.display(e1);
+        
+  
+        //System.out.println(e1);
+        //System.out.println(e2);
+        //System.out.println(e1.equals(e2));
+    }
+    public static void display(Emp e) {
+    	System.out.println("-----EMPLOYEE DETAILS-----");
+    	System.out.println(e);
+    }
+}

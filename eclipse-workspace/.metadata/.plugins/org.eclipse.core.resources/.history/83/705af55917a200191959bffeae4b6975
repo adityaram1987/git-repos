@@ -1,0 +1,27 @@
+package jdbcDemo;
+import java.sql.*;
+
+public class JdbcDemo {
+	public static void main(String args[]) {
+		try
+		{
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db", "root", "Sapient123");
+			Statement stmt = con.createStatement();
+			stmt.executeUpdate("insert into emp values('Snehith',27)");
+			ResultSet rs= stmt.executeQuery("select * from emp");
+			while(rs.next()) {
+				System.out.println("Name: "+ rs.getString(1));
+				System.out.println("Age: "+ rs.getInt(2));
+				System.out.println();
+			}
+			rs.close();
+			stmt.close();
+			con.close();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+	}
+}
